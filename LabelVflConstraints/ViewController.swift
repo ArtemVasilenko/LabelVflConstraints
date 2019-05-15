@@ -1,20 +1,26 @@
-//
-//  ViewController.swift
-//  LabelVflConstraints
-//
-//  Created by Артем on 5/15/19.
-//  Copyright © 2019 Артем. All rights reserved.
-//
+// VFL
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ArrayLabels {
+    
+    var myLabel = GenerationLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        myLabel.center = self.view.center
+        self.view.addSubview(myLabel)
+        
+        arrLabels().forEach {
+            self.view.addSubview($0)
+        }
+        
+        
+        
     }
 
+    
 
 }
 
